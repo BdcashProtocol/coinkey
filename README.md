@@ -220,7 +220,7 @@ Browser Support
 
 Clone the repo:
 
-    git clone https://github.com/cryptocoinjs/coinkey
+    git clone https://github.com/BdcashProtocol/coinkey
 
 Install Browserify
 
