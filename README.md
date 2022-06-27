@@ -1,7 +1,7 @@
 coinkey
 =======
 
-[![Version](https://img.shields.io/npm/v/@bdcash-protocol/coinkey.svg)](https://www.npmjs.org/package/@bdcash-protocol/coinkey)
+[![Version](https://img.shields.io/npm/v/@bdeco/coinkey.svg)](https://www.npmjs.org/package/@bdeco/coinkey)
 [![build status](https://secure.travis-ci.org/cryptocoinjs/coinkey.png)](http://travis-ci.org/cryptocoinjs/coinkey)
 [![Coverage Status](https://img.shields.io/coveralls/cryptocoinjs/coinkey.svg)](https://coveralls.io/r/cryptocoinjs/coinkey)
 
@@ -12,7 +12,7 @@ in both Node.js and the browser.
 Installation
 ------------
 
-    npm i --save @bdcash-protocol/coinkey
+    npm i --save @bdeco/coinkey
 
 
 Usage
@@ -23,7 +23,7 @@ Usage
 ### Generate a Bunch of Bitcoin Keys/Addresses
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 
 var bitcoinKeys = []
 for (var i = 0; i < 10; ++i) {
@@ -36,13 +36,13 @@ for (var i = 0; i < 10; ++i) {
 #### Generate a Bunch of Namecoin Keys/Addresses
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 // npm install --save coininfo
 var ci = require('coininfo')
 
-var namecoins = []
+var bdcashprotocol = []
 for (var i = 0; i < 10; ++i) {
-  namecoins.push(CoinKey.createRandom(ci('NMC')))
+  namecoins.push(CoinKey.createRandom(ci('BDECO')))
 }
 ```
 
@@ -50,7 +50,7 @@ for (var i = 0; i < 10; ++i) {
 #### Parse a Wallet Import Key and Determine Crypto Currency
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 var ci = require('coininfo')
 
 var ck = CoinKey.fromWif('QVD3x1RPiWPvyxbTsfxVwaYLyeBZrQvjhZ2aZJUsbuRgsEAGpNQ2')
@@ -65,7 +65,7 @@ console.log(ck.versions.public === ci('DOGE').versions.public) // => true
 #### Change to Testnet Later
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 var ci = require('coininfo')
 
 var ck = new CoinKey(new Buffer('1184cd2cdd640ca42cfc3a091c51d549b2f016d454b2774019c2b2d2e08529fd', 'hex'))
@@ -90,7 +90,7 @@ Constructor function.
 Keys are default set to `compressed` is `true`.
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 //npm install --save secure-random@1.x
 var secureRandom = require('secure-random')
 
@@ -123,7 +123,7 @@ Inherited from [ECKey][eckey]. [eckey.privateExportKey](http://cryptocoinjs.com/
 Get the private WIF (Wallet Import Format).
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 
 var privateKeyHex = "1184cd2cdd640ca42cfc3a091c51d549b2f016d454b2774019c2b2d2e08529fd"
 
@@ -149,7 +149,7 @@ Inherited from [ECKey][eckey]. [eckey.publicKey](http://cryptocoinjs.com/modules
 Get the public address.
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 
 var privateKeyHex = "1184cd2cdd640ca42cfc3a091c51d549b2f016d454b2774019c2b2d2e08529fd"
 
@@ -180,7 +180,7 @@ Inherited from [ECKey][eckey]. [eckey.publicPoint](http://cryptocoinjs.com/modul
 Returns the string representation.
 
 ```js
-var CoinKey = require('@bdcash-protocol/coinkey')
+var CoinKey = require('@bdeco/coinkey')
 
 var privateKeyHex = "1184cd2cdd640ca42cfc3a091c51d549b2f016d454b2774019c2b2d2e08529fd"
 
